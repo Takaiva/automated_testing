@@ -1,11 +1,7 @@
 import capitalize from "../src/firstSymbolToUpper.js";
+import { strict as assert } from 'assert';
 
-if (capitalize('hello') !== 'Hello') {
-	throw new Error('Tests failed');
-}
-
-if (capitalize('') !== '') {
-	throw new Error('Tests failed');
-}
+assert.equal(capitalize('hello'), 'Hello');
+assert.equal(capitalize(''), '');
 
 console.log('Tests passed');
